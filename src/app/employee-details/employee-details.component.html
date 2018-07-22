@@ -1,0 +1,15 @@
+<div class="modal-header">
+    
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+    <div>
+        <img src="{{userDetails.avatar_url}}" alt="" class="img-float" width="80px">
+        <li class="list-group-item">{{userDetails.id}}</li>
+        <li class="list-group-item">{{userDetails.name}}</li>
+        <li class="list-group-item">{{userDetails.salary}}</li>
+        <li class="list-group-item">{{userDetails.age}}</li>
+    </div>
+</div>

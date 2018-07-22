@@ -1,19 +1,28 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
+import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
+import { BsModalService } from 'ngx-bootstrap/modal';
+import { ModalModule } from 'ngx-bootstrap';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    EmployeeListComponent
+    EmployeeListComponent,
+    EmployeeDetailsComponent
   ],
   imports: [
     BrowserModule,
+    NgbModule.forRoot(),
+    ModalModule.forRoot(),
     HttpClientModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [BsModalService],
+  bootstrap: [AppComponent],
+  entryComponents: [ EmployeeDetailsComponent ]
 })
 export class AppModule { }

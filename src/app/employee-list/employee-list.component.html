@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-3"  *ngFor="let data of totalList; let i = index">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title text-center">{{blockID[i]}}</h5>
+        </div>
+        <ul class="list-group list-group-flush">
+          <h6 class="list-group-item text-center">{{data.domainName}} ({{data.percentage}})</h6>
+          <div class="row">
+            <div class="col-sm-6" *ngFor="let test of data.allUser">
+              <li class="list-group-item">{{test.name}}</li>
+            </div>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

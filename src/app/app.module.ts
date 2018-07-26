@@ -12,21 +12,21 @@ import { myRoutes } from './app.routing';
 
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    EmployeeListComponent,
-    EmployeeDetailsComponent
-  ],
-  imports: [
-    BrowserModule,
-    NgbModule.forRoot(),
-    ModalModule.forRoot(),
-    HttpClientModule,
-    RouterModule,
-    myRoutes
-  ],
-  providers: [BsModalService],
-  bootstrap: [AppComponent],
-  entryComponents: [ EmployeeDetailsComponent ]
+    declarations: [
+        AppComponent,
+        EmployeeListComponent,
+        EmployeeDetailsComponent
+    ],
+    imports: [
+        BrowserModule,
+        NgbModule.forRoot(),
+        ModalModule.forRoot(),
+        HttpClientModule,
+        RouterModule,
+        myRoutes
+    ],
+    providers: [ BsModalService ],
+    bootstrap: [ AppComponent ],
+    entryComponents: [ EmployeeDetailsComponent ]
 })
 export class AppModule { }

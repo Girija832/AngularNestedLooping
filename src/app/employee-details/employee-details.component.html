@@ -1,5 +1,4 @@
-<div class="modal-header">
-    
+<!-- <div class="modal-header">
     <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
         <span aria-hidden="true">&times;</span>
     </button>
@@ -12,4 +11,28 @@
         <li class="list-group-item">{{userDetails.salary}}</li>
         <li class="list-group-item">{{userDetails.age}}</li>
     </div>
+</div> -->
+
+<div class="container">
+        <table class="table">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Image</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Age</th>
+                    <th scope="col">Salary</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">{{details.id}}</th>
+                    <th><img src="{{details.avatar_url}}" alt="pic" width="40px"> </th>
+                    <td>{{details.name | uppercase }}</td>
+                    <td>{{details.age}}</td>
+                    <td>{{details.salary}}</td>
+                  </tr>
+                </tbody>
+              </table>
+    <button class="btn btn-default" type="button" (click)="goBack()">Back</button>
 </div>

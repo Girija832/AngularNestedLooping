@@ -7,6 +7,8 @@ import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
 import { BsModalService } from 'ngx-bootstrap/modal';
 import { ModalModule } from 'ngx-bootstrap';
+import { RouterModule } from '@angular/router';
+import { myRoutes } from './app.routing';
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import { ModalModule } from 'ngx-bootstrap';
     BrowserModule,
     NgbModule.forRoot(),
     ModalModule.forRoot(),
-    HttpClientModule
+    HttpClientModule,
+    RouterModule,
+    myRoutes
   ],
   providers: [BsModalService],
   bootstrap: [AppComponent],

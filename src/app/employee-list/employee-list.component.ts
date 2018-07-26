@@ -3,6 +3,7 @@ import { GetEmployeeListService } from '../services/get-employee-list.service';
 import { BsModalService } from 'ngx-bootstrap/modal';
 import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
 import { EmployeeDetailsComponent } from '../employee-details/employee-details.component';
+import { Router, ActivatedRoute } from "@angular/router";
 
 
 @Component({
@@ -18,7 +19,9 @@ export class EmployeeListComponent implements OnInit {
 
   constructor(
               private _getEmployeeListService: GetEmployeeListService,
-              private modalService: BsModalService
+              // private modalService: BsModalService,
+             private router: Router,
+             private activatedRoute: ActivatedRoute
             ) { }
 
   ngOnInit() {
@@ -28,9 +31,11 @@ export class EmployeeListComponent implements OnInit {
   }
 
   openModal(details: any) {
-    this.modalRef = this.modalService.show(EmployeeDetailsComponent);
-
-    this.modalRef.content.userDetails = details;
+    // this.modalRef = this.modalService.show(EmployeeDetailsComponent);
+    // this.modalRef.content.userDetails = details;
+    let temp = JSON.stringify(details);
+    localStorage.setItem('currentUser',temp);
+    this.router.navigate(['employeeDetails'], {relativeTo: this.activatedRoute});
 
   }
 }

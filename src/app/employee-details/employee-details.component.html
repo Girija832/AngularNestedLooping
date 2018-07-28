@@ -13,12 +13,12 @@
     </div>
 </div> -->
 
-<div class="container">
+<div class="container" id="content" #content>
         <table class="table">
                 <thead class="thead-dark">
                   <tr>
                     <th scope="col">ID</th>
-                    <th scope="col">Image</th>
+                    <!-- <th scope="col">Image</th> -->
                     <th scope="col">Name</th>
                     <th scope="col">Age</th>
                     <th scope="col">Salary</th>
@@ -27,7 +27,7 @@
                 <tbody>
                   <tr>
                     <th scope="row">{{details.id}}</th>
-                    <th><img src="{{details.avatar_url}}" alt="pic" width="40px"> </th>
+                    <!-- <th><img src="{{details.avatar_url}}" alt="pic" width="40px"> </th> -->
                     <td>{{details.name | uppercase }}</td>
                     <td>{{details.age}}</td>
                     <td>{{details.salary}}</td>
@@ -35,4 +35,5 @@
                 </tbody>
               </table>
     <button class="btn btn-default" type="button" (click)="goBack()">Back</button>
+    <button class="btn btn-default float-right" (click)="downloadPDF()">Download PDF</button>
 </div>
